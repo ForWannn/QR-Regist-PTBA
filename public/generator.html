@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Generator | QR Absensi</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <main class="container">
+    <a class="back-link" href="/">← Beranda</a>
+    <header class="page-heading"><span class="eyebrow">PARTICIPANT REGISTRATION</span><h1>QR Generator</h1><p class="muted">Masukkan data peserta untuk membuat QR Code unik.</p></header>
+    <section class="panel">
+      <form id="participant-form" class="form-grid">
+        <label>Nama lengkap<input id="name" name="name" maxlength="120" placeholder="Contoh: Andi Pratama" required></label>
+        <label>Alamat email<input id="email" name="email" type="email" maxlength="190" placeholder="nama@email.com" required></label>
+        <button class="button" type="submit">Generate QR Code</button>
+      </form>
+      <div id="message" class="message" role="status"></div>
+    </section>
+    <section id="qr-result" class="panel qr-result hidden">
+      <div><span class="eyebrow">QR BERHASIL DIBUAT</span><h2 id="result-name"></h2><p id="result-email" class="muted"></p></div>
+      <img id="qr-image" alt="QR Code peserta">
+      <p class="muted small">Email QR belum dikirim. Integrasi email akan ditambahkan pada tahap berikutnya.</p>
+      <button id="download-qr" class="button button-secondary" type="button">Download QR</button>
+    </section>
+  </main>
+  <script src="/js/generator.js"></script>
+</body>
+</html>

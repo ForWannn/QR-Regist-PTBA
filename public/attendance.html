@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Kehadiran | QR Absensi</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <main class="container">
+    <a class="back-link" href="/">← Beranda</a>
+    <header class="page-heading"><span class="eyebrow">ATTENDANCE MONITORING</span><h1>Daftar Kehadiran</h1><p class="muted">Data diperbarui otomatis saat peserta melakukan scan.</p></header>
+    <section class="stats-grid">
+      <div class="stat-card"><span>Total peserta</span><strong id="total-count">0</strong></div>
+      <div class="stat-card"><span>Hadir</span><strong id="present-count">0</strong></div>
+      <div class="stat-card"><span>Belum hadir</span><strong id="absent-count">0</strong></div>
+    </section>
+    <section class="panel">
+      <div class="toolbar"><h2>Data peserta</h2><input id="search" class="search-input" placeholder="Cari nama atau email..."></div>
+      <div class="table-wrap"><table><thead><tr><th>Nama</th><th>Email</th><th>Status</th><th>Waktu hadir</th></tr></thead><tbody id="participant-rows"><tr><td colspan="4" class="empty">Memuat data...</td></tr></tbody></table></div>
+    </section>
+  </main>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/attendance.js"></script>
+</body>
+</html>

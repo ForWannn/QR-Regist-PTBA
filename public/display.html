@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Display | QR Absensi</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="display-page">
+  <main class="container">
+    <a class="back-link" href="/">← Beranda</a>
+    <header class="page-heading"><span class="eyebrow">REGISTRATION CHECK-IN</span><h1>Live Attendance Display</h1><p class="muted">Klik area input lalu arahkan scanner OM200 ke QR peserta.</p></header>
+    <section class="panel scanner-panel">
+      <label for="scanner-input">Input scanner</label>
+      <input id="scanner-input" class="scanner-input" autocomplete="off" placeholder="Siap menerima hasil scan QR..." autofocus>
+      <p class="small muted">Jika scanner menggunakan mode USB HID Keyboard, hasil scan akan masuk ke kolom ini dan diakhiri Enter.</p>
+    </section>
+    <section id="result-card" class="result-card neutral">
+      <div class="result-symbol">⌁</div><p class="eyebrow">MENUNGGU PEMINDAIAN</p><h2 id="result-name">Silakan scan QR peserta</h2><p id="result-message" class="muted">Informasi kehadiran akan muncul di sini.</p><p id="result-time" class="small muted"></p>
+    </section>
+    <div class="live-indicator"><i></i> Terhubung ke server lokal</div>
+  </main>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/display.js"></script>
+</body>
+</html>
